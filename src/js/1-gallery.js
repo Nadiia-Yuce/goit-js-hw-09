@@ -93,9 +93,9 @@ function handlerClick(event) {
   if (event.currentTarget === event.target) {
     return;
   }
-
-  let lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
 }
+
+let lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
