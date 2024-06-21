@@ -1,2 +1,2 @@
-import"./assets/styles-49850c8f.js";console.log("mother fucker!");
+import"./assets/styles-50c34dc2.js";const t={email:"",message:""},r="feedback-form-state";function o(){localStorage.setItem(r,JSON.stringify(t))}const a=document.querySelector(".feedback-form");a.addEventListener("input",m);a.addEventListener("submit",n);function m(e){(e.target.name==="email"||e.target.name==="message")&&(t[e.target.name]=e.target.value.trim(),o())}function n(e){if(!t.email||!t.message){e.preventDefault(),alert("Fill please all fields");return}console.log(t),localStorage.removeItem(r),t={email:"",message:""},a.reset()}
 //# sourceMappingURL=commonHelpers2.js.map
