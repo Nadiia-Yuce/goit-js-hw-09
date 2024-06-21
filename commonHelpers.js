@@ -6,5 +6,5 @@ import"./assets/styles-49850c8f.js";import{S as e}from"./assets/vendor-10cb7c31.
           alt="${o}"
         />
       </a>
-    </li>`).join("")}function r(a){a.preventDefault(),a.currentTarget!==a.target&&new e(".gallery a",{captionsData:"alt",captionDelay:250})}
+    </li>`).join("")}function r(a){a.preventDefault(),a.currentTarget,a.target}new e(".gallery a",{captionsData:"alt",captionDelay:250});
 //# sourceMappingURL=commonHelpers.js.map
