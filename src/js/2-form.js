@@ -20,13 +20,15 @@ function handlerGetInfo(evt) {
 }
 
 function handlerSubmitForm(evt) {
+  evt.preventDefault();
+
   if (!formData.email || !formData.message) {
-    evt.preventDefault();
-    alert('Fill please all fields');
+    alert('Fill all fields, please!');
     return;
   }
   console.log(formData);
   localStorage.removeItem(lokalStorageKey);
-  formData = { email: '', message: '' };
+  formData.email = '';
+  formData.message = '';
   form.reset();
 }
