@@ -11,6 +11,7 @@ function saveFormData() {
 const form = document.querySelector('.feedback-form');
 form.addEventListener('input', handlerGetInfo);
 form.addEventListener('submit', handlerSubmitForm);
+getLokalStorageInfo();
 
 function handlerGetInfo(evt) {
   if (evt.target.name === 'email' || evt.target.name === 'message') {
@@ -31,4 +32,14 @@ function handlerSubmitForm(evt) {
   formData.email = '';
   formData.message = '';
   form.reset();
+}
+
+function getLokalStorageInfo() {
+  const lokalData = localStorage.getItem(lokalStorageKey);
+  if (lokalData !== null) {
+    const parsedData = JSON.parse(lokalData);
+    Object.assign(formData, parsedData);
+    form.email.value = formData.email || '';
+    form.message.value = formData.message || '';
+  }
 }
